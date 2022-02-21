@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="overflow: auto;">
+    <nav>
+        <div class="nav-container">
+            <div class="menu-icon-container">
+                <div class="menu-icon">
+                    <img src="images/icon-menu.svg">
+                </div>
+            </div>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/logo.svg">
+                </div>
+            </div>
+            <div class="link-list-container">
+                <ul class="link-list">
+                    <li class="list collection">
+                        <a href="#">Collection</a>
+                    </li>
+                    <li class="list men">
+                        <a href="#">Men</a>
+                    </li>
+                    <li class="list women">
+                        <a href="#">Women</a>
+                    </li>
+                    <li class="list about">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="list content">
+                        <a href="#">Content</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-link-list-container hide">
+                <div class="link-list-container-mobile-view">
+                    <div class="close-menu">
+                        <img src="images/icon-close.svg">
+                    </div>
+                    <ul class="link-list">
+                        <li class="list collection">
+                            <a href="#">Collection</a>
+                        </li>
+                        <li class="list men">
+                            <a href="#">Men</a>
+                        </li>
+                        <li class="list women">
+                            <a href="#">Women</a>
+                        </li>
+                        <li class="list about">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="list content">
+                            <a href="#">Content</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="cart">
+                    <img src="images/icon-cart.svg">
+                    <div class="order-container-head hide"></div>
+                    <div class="cart-noti none">
+                        <span id="number"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-container">
+                <div class="profile">
+                    <img src="images/image-avatar.png">
+                </div>
+            </div>
+            <div class="order-container">
+                <div class="body hide">
+                    <h5 class="h-text">Cart</h5>
+                    <hr>
+                    <div class="order-content">
+                        <div class="order-have none">
+                            <div class="order-box">
+                                <div class="image-container">
+                                    <img src="images/image-product-1-thumbnail.jpg">
+                                </div>
+                                <div class="text-container">
+                                    <p class="order-name">
+                                        Fall Limited Edition Sneakers
+                                    </p>
+                                    <div class="order-price">
+                                        <span class="one-price">
+                                            $125.00
+                                        </span>
+                                        <span>
+                                            x
+                                        </span>
+                                        <span class="amount" id="amount"></span>
+                                        <span class="total-price"></span>
+                                    </div>
+                                </div>
+                                <div class="del-order">
+                                    <img src="images/icon-delete.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="checkout">
+                                <button class="checkout-btn">Checkout</button>
+                            </div>
+                        </div>
+                        <div class="nothing-order">
+                            <h5>Your cart is empty</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="main-container">
+            <div class="row-container container1">
+                <div class="coloum-container">
+                    <div class="product-image-container">
+                        <div class="prev-container">
+                            <img src="images/icon-previous.svg" class="prev">
+                        </div>
+                        <img class="product-image" id="active-image" src="images/image-product-1.jpg">
+                        <div class="next-container">
+                            <img src="images/icon-next.svg" class="next">
+                        </div>
+                    </div>
+                    <div class="image-thumbnail-container">
+                        <div class="image-container">
+                            <div class="img-thumb active">
+                                <img src="images/image-product-1.jpg" class="thumbnail">
+                            </div>
+                            <div class="img-thumb">
+                                <img src="images/image-product-2.jpg" class="thumbnail">
+                            </div>
+                            <div class="img-thumb">
+                                <img src="images/image-product-3.jpg" class="thumbnail">
+                            </div>
+                            <div class="img-thumb">
+                                <img src="images/image-product-4.jpg" class="thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-container container2">
+                <div class="coloum-container">
+                    <h4 class="company-name">
+                        sneaker company
+                    </h4>
+                    <h1 class="h-text">
+                        Fall Limited Edition Sneakers
+                    </h1>
+                    <p class="p-text">
+                        These low-profile sneakers are your perfedt casual wear companion. Featuring a durable
+                        rubber outer sole they'll withstand everythin the weather can offer.
+                    </p>
+                    <div class="discount-price">
+                        <div class="price">
+                            $125.00
+                        </div>
+                        <div class="percent">
+                            <p>50%</p>
+                        </div>
+                    </div>
+                    <p class="normal-price">$250.00</p>
+                    <div class="place-to-order">
+                        <div class="amount-container">
+                            <span class="del-amount" id="#del-amount">
+                                −
+                            </span>
+                            <span class="order-amount" id="order-amount">
+
+                            </span>
+                            <span class="add-amount" id="add-amount">
+                                +
+                            </span>
+                        </div>
+                        <button class="add-order-container" id="add-order">
+                            <img src="images/icon-cart.svg">
+                            <p>Add to cart</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-container">
+                <div class="row-container overlay">
+                    <div class="coloum-container">
+                        <div class="close-overlay">
+                            <img src="images/icon-close.svg">
+                        </div>
+                        <div class="product-image-container">
+                            <div class="overlay-prev-container">
+                                <img src="images/icon-previous.svg" class="overlay-prev">
+                            </div>
+                            <img class="product-image" id="overlay-active-image" src="images/image-product-1.jpg">
+                            <div class="overlay-next-container">
+                                <img src="images/icon-next.svg" class="overlay-next">
+                            </div>
+                        </div>
+                        <div class="image-thumbnail-container">
+                            <div class="image-container">
+                                <div class="overlay-img-thumb active">
+                                    <img src="images/image-product-1.jpg" class="thumbnail">
+                                </div>
+                                <div class="overlay-img-thumb">
+                                    <img src="images/image-product-2.jpg" class="thumbnail">
+                                </div>
+                                <div class="overlay-img-thumb">
+                                    <img src="images/image-product-3.jpg" class="thumbnail">
+                                </div>
+                                <div class="overlay-img-thumb">
+                                    <img src="images/image-product-4.jpg" class="thumbnail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="curtain hide"></div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
